@@ -21,3 +21,16 @@ body{
     font-family: 'Luckiest Guy', cursive;
     font-size: 40px;
 }
+
+.pokemons{
+    display: flex;
+}
+
+.pokemom{
+    width: 33.3%;
+    background-color: rgb(220, 220, 220);
+}
+
+.pokemom img{
+    width: 100%;
+}
