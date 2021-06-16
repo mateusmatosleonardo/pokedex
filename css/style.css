@@ -18,4 +18,6 @@ body{
 .main h2{
     text-align: center;
     color: yellow;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 40px;
 }
