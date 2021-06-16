@@ -46,3 +46,13 @@ body{
     font-family: 'Luckiest Guy', cursive;
     padding: 10px 0;
 }
+
+@media screen and (max-width: 768px){
+    .pokemom{
+        width: 100%;
+        text-align: center;
+    }
+    .pokemom img{
+        max-width: 300px;
+    }
+}
