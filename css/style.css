@@ -23,14 +23,26 @@ body{
 }
 
 .pokemons{
+    margin: 20px 0;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .pokemom{
-    width: 33.3%;
+    border-radius: 10px;
+    width: 29%;
+    margin: 20 2%;
     background-color: rgb(220, 220, 220);
 }
 
 .pokemom img{
     width: 100%;
+}
+
+.pokemom p{
+    color: black;
+    text-align: center;
+    font-size: 21px;
+    font-family: 'Luckiest Guy', cursive;
+    padding: 10px 0;
 }
