@@ -5,7 +5,7 @@
 }
 
 body{
-    background-color: #eff1f0;
+    background-color: #d7e6de;
 }
 
 .main{
@@ -13,4 +13,9 @@ body{
     background-color: white;
     margin: 20px auto;
     padding: 30px 2%;
+}
+
+.main h2{
+    text-align: center;
+    color: yellow;
 }
