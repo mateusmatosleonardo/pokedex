@@ -50,6 +50,10 @@
     <script>
         fetch('https://pokeapi.co/api/v2/pokemon?limit=100')
             .then(response => response.json())
-            .then(allpokemom => console.log(allpokemom))
+            .then(allpokemom => {
+                allpokemom.results.map((val)=>{
+                    console.log(val);
+                })
+            })
     </script>
 </html> 
