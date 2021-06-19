@@ -5,7 +5,7 @@
 }
 
 body{
-    background-color: #d7e6de;
+    background-color: rgb(236, 31, 31);
 }
 
 .main{
@@ -20,6 +20,7 @@ body{
     color: yellow;
     font-family: 'Luckiest Guy', cursive;
     font-size: 40px;
+    text-shadow: 0.2em 0.2em 0.3em rgb(236, 31, 31);
 }
 
 .pokemom-boxes{
