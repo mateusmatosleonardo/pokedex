@@ -51,6 +51,8 @@
         fetch('https://pokeapi.co/api/v2/pokemon?limit=100')
             .then(response => response.json())
             .then(allpokemom => {
+                
+                // consultando valores
                 allpokemom.results.map((val)=>{
                     console.log(val);
                 })
