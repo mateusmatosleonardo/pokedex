@@ -51,11 +51,25 @@
         fetch('https://pokeapi.co/api/v2/pokemon?limit=100')
             .then(response => response.json())
             .then(allpokemom => {
-                
+
+                var pokemons = [];
+            
                 // consultando valores
                 allpokemom.results.map((val)=>{
-                    console.log(val);
-                })
+                    
+
+                    fetch(val.url)
+                    .then(response => response.json())
+                    .then(pokemonsSingle => {
+                        pokemons.push({nome:val.name,image:pokemonsSingle.sprites.front_default});
+
+                        if(pokemons.length == 100){
+                            //Finalizado
+                            console.log(pokemons);
+                        }
+                })    
             })
+
+        })
     </script>
 </html> 
