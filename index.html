@@ -12,37 +12,9 @@
         <div class="main">
             <h2>Pokedex</h2>
 
-            <div class="pokemons">
+            <div class="pokemom-boxes">
 
-                <div class="pokemom">
-                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png">
-                    <p>Dito</p>
-                </div><!--pokemom-->
-
-                <div class="pokemom">
-                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png">
-                    <p>Dito</p>
-                </div><!--pokemom-->
-
-                <div class="pokemom">
-                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png">
-                    <p>Dito</p>
-                </div><!--pokemom-->
-
-                <div class="pokemom">
-                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png">
-                    <p>Dito</p>
-                </div><!--pokemom-->
-
-                <div class="pokemom">
-                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png">
-                    <p>Dito</p>
-                </div><!--pokemom-->
-
-                <div class="pokemom">
-                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png">
-                    <p>Dito</p>
-                </div><!--pokemom-->
+                
 
             </div><!--pokemons-->
         </div><!--main-->
@@ -60,13 +32,31 @@
 
                     fetch(val.url)
                     .then(response => response.json())
-                    .then(pokemonsSingle => {
-                        pokemons.push({nome:val.name,image:pokemonsSingle.sprites.front_default});
+                    .then(pokemomSingle => {
+                        pokemons.push({nome:val.name,image:pokemomSingle.sprites.front_default});
 
                         if(pokemons.length == 100){
                             //Finalizado
-                            console.log(pokemons);
-                        }
+
+                            var pokemomBoxes = document.querySelector('.pokemom-boxes');
+                            pokemomBoxes.innerHTML = "";
+        
+                            /*
+                            <div class="pokemom">
+                            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png">
+                            <p>Dito</p>
+                            </div>
+                            */
+                           pokemons.map(function(val){
+                           pokemomBoxes.innerHTML += `
+                                <div class="pokemom">
+                                <img src="`+val.image+`">
+                                <p>`+val.nome+`</p>
+                                </div>
+                           `;
+                             
+                        })
+                    }
                 })    
             })
 

@@ -22,7 +22,7 @@ body{
     font-size: 40px;
 }
 
-.pokemons{
+.pokemom-boxes{
     margin: 20px 0;
     display: flex;
     flex-wrap: wrap;
